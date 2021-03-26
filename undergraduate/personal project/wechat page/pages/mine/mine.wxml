@@ -1,0 +1,31 @@
+
+  <!-- <text>我的页面</text> -->
+  <view class="top">
+    <image src="{{userInfo.avatarUrl}}" style="margin: 16px;vertical-align: middle;width:80px; height: 80px; border-radius: 50%"></image>
+    <view class="top-bd">
+      <view style="font-size:20px">{{userInfo.nickname}}</view>
+      <view style="font-size:12px;color:#aaa">联系方式：{{tel?tel:"无"}}</view>
+    </view>
+  </view>
+        <view class="kind-list">
+            <block wx:for="{{list}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}" bindtap="kindToggle" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}">
+                        <view class="weui-flex__item">{{item.name}}</view>
+                        <image class="kind-list__img" src="/images/icon_nav_{{item.id}}.png"></image>
+                    </view>
+                    <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+                        <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+                            <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
+                                <navigator url="{{page}}/{{page}}" class="weui-cell weui-cell_access">
+                                    <view class="weui-cell__bd">公司: 巴拉巴拉</view>
+                                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                                </navigator>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+
+  <tabbar tabbar="{{tabbar}}"></tabbar>

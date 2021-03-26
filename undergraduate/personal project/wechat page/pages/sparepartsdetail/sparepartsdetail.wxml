@@ -1,0 +1,40 @@
+<!--pages/sparepartssdetail/sparepartssdetail.wxml-->
+<!-- <text>pages/sparepartssdetail/sparepartssdetail.wxml</text> -->
+<!--pages/sparepartsdetail/sparepartsdetail.wxml-->
+<!-- <text>pages/sparepartsdetail/sparepartsdetail.wxml</text> -->
+<view class="container">
+      <view class="weui-cell__hd">
+        <image src="{{sparepartsdetail.img}}" style="margin: 16px;vertical-align: middle;width:80px; height: 80px"></image>
+        <view style="font-size:20px">{{sparepartsdetail.name}}</view>
+      </view>
+      <view class="detail">
+        <view style="font-size:15px;color:#cdf">备件编号：  {{sparepartsdetail.no}}</view>
+        <view style="font-size:15px;color:#cdf">设备数量：  {{sparepartsdetail.number}}</view>
+        <view style="font-size:15px;color:#cdf">生产厂商：  {{sparepartsdetail.manufacturer}}</view>
+        <view style="font-size:15px;color:#cdf">供应商：  {{sparepartsdetail.vendor}}</view>
+        <view style="font-size:15px;color:#cdf">仓库号：  {{sparepartsdetail.place}}</view>
+        <view style="font-size:15px;color:#cdf">设备类型：  {{sparepartsdetail.category}}</view>
+         <image class="detail_img" src="/images/xiugai.png"  bindtap="modify"></image>
+      </view>
+  <!-- <view class="daily">
+    <view class="daily-text">日常工具</view>
+    <view class="tianjialaninner" >
+        <view class='tianjialaninner_item' bindtap='goAddspareparts'>
+          <image class='tianjialaninner_item_image' src='/images/guzhangxiuli.png'></image>
+          <view class='tianjialaninner_item_text'>故障登记</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap='goAddrepair'>
+          <image class='tianjialaninner_item_image' src='/images/baoxiu.png'></image>
+          <view class='tianjialaninner_item_text'>保养计划</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap='goAddmaintainance'>
+          <image class='tianjialaninner_item_image' src='/images/baoyang.png'></image>
+          <view class='tianjialaninner_item_text'>备件更换</view>
+        </view>
+      </view>
+    </view>-->
+</view> 
+
+
+
+

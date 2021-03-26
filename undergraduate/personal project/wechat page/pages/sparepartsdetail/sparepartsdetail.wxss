@@ -1,0 +1,59 @@
+
+.container{
+  height: 100%;
+  padding: 0;
+}
+.weui-cell__hd{
+  background:linear-gradient(#e8915b, #ffffff);
+  width: 100%;
+  text-align: center
+}
+.detail{
+  padding: 16px;
+}
+.detail_img{
+    height: 50rpx;
+  width: 50rpx; 
+}
+.daily{
+  width: 90%;
+  margin: 16px;
+  border: 1px solid #e2e2e2
+}
+.daily-text{
+  color: rgb(145, 144, 144);
+  padding: 5px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.tianjialaninner{
+  /* height: 80px; */
+  margin: 5px;
+  padding: 0 10px;
+  background-color: rgb(253, 253, 253);
+  display: flex;
+  justify-content: center;
+  /* background: rgb(239, 239, 239); */
+  align-items: center;
+  border-radius: 5px;
+}
+.tianjialaninner_item{
+  width: 25%;
+  height: 50%;
+  /* background: rgb(239, 239, 239); */
+  text-align: center;
+    align-items: center;
+  position: relative;
+}
+.tianjialaninner_item_image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 15rpx;
+  border-radius: 10px;
+}
+
+.tianjialaninner_item_text {
+  /* border: 1px solid black; */
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  color: rgb(145, 144, 144);
+}

@@ -1,0 +1,51 @@
+/* pages/dataanalysis/dataanalysis.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+.orders-switch {
+  width: 100%;
+  background: #fff;
+  height: 84rpx;
+  display: flex;
+  /* border-bottom: 1px solid rgba(0,0,0,.15); */
+}
+
+.orders-switch .item {
+  /* display: inline-block; */
+  height: 82rpx;
+  width: 30%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+.orders-switch .item .txt{
+  /* display: inline-block; */
+  height: 82rpx;
+  padding: 0;
+  line-height: 82rpx;
+  color: #9a9ba1;
+  font-size: 30rpx;
+  /* width: 230rpx; */
+}
+
+.orders-switch .item.active .txt{
+  color: #e64340;
+  border-bottom: 4rpx solid #e64340;
+}
+
+.dataanalysis_img{
+  margin: 5px;
+  padding: 0 10px;
+  background-color: rgb(253, 253, 253);
+}
+.qiun-charts {
+		/* width: 750rpx;
+		height: 500rpx; */
+		background-color: #FFFFFF;
+	}
+	.charts {
+		width: 750rpx;
+		height: 500rpx;
+		background-color: #FFFFFF;
+	}

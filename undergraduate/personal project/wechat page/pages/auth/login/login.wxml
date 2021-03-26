@@ -1,0 +1,10 @@
+<!--pages/auth/login/login.wxml-->
+<!-- <text>pages/auth/login/login.wxml</text> -->
+<view class="container">
+  <view class="tanxie" >
+    <view class="denglu">登录</view>
+      <button class="bottom-img"  open-type="getUserInfo" bindgetuserinfo="wxLogin"></button>
+      <!-- <navigator url="/pages/auth/register/register" class="bottom-register" >注册</navigator> -->
+  </view>
+
+</view>

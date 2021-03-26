@@ -1,0 +1,14 @@
+<!--pages/auth/register/register.wxml-->
+<!-- <text>pages/auth/register/register.wxml</text> -->
+<view class="container">
+    <view class="tanxie" >
+    <view class="denglu">注册</view>
+        <view class="input-password" >电话号码</view>
+    <input class="input-password-item" bindconfirm="changetel"></input>
+    <view class="input-password">公司</view>
+    <input class="input-password-item" bindconfirm="changecom"></input>
+        <view class="input-password" >部门</view>
+    <input class="input-password-item" bindconfirm="changedep"></input>
+    <button class="bottom-img"  bindtap="addinfo">提交</button>   
+  </view>
+</view>

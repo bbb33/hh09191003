@@ -1,0 +1,137 @@
+.container{
+  display: block;
+  margin-top: 175rx;
+  height: 100%;
+  padding: 84rpx 0;
+}
+
+.search-header {
+  position: fixed;
+  top: 84rpx;
+  height: 91rpx;
+  width: 93%;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 31.25rpx;
+  font-size: 29rpx;
+  color: #333;
+}
+
+.search-header .input-box {
+  position: relative;
+  margin-top: 16rpx;
+  float: left;
+  /* width: 0; */
+  flex: 1;
+  height: 59rpx;
+  line-height: 59rpx;
+  padding: 0 20rpx;
+  background: #f4f4f4;
+}
+
+.search-header .icon {
+  position: absolute;
+  top: 15rpx;
+  left: 20rpx;
+  width: 31rpx;
+  height: 31rpx;
+}
+
+.search-header .del {
+  position: absolute;
+  top: 15rpx;
+  right: 10rpx;
+  width: 31rpx;
+  height: 31rpx;
+  z-index: 10;
+}
+
+.del{
+  padding: 2px;
+}
+
+.search-header .keywrod {
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  width: 506rpx;
+  height: 59rpx;
+  padding-left: 30rpx;
+}
+
+.search-header .right {
+  margin-top: 24rpx;
+  margin-left: 31rpx;
+  margin-right: 6rpx;
+  width: 58rpx;
+  height: 43rpx;
+  line-height: 43rpx;
+  float: right;
+}
+.weui-cells{
+  margin-top: 91rpx;
+  margin-bottom: 98rpx;
+}
+.weui-cell__bd{
+   padding: 16px;
+}
+.pop{
+  position: absolute;
+  margin-top: 30px;
+  width: 225px;
+  /* height: 59rpx; */
+  padding-left: 31.25rpx;
+  background: #ffffff;
+}
+
+.pop-item{
+  border-bottom: 1px solid #f4f4f4
+}
+
+.tianjia_bottom{
+  position: fixed;
+  right:20px;
+  bottom: 100px;
+  width: 30px;
+  height: 30px
+}
+.orders-switch {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  height: 84rpx;
+  display: flex;
+  /* border-bottom: 1px solid rgba(0,0,0,.15); */
+}
+
+.orders-switch .item {
+    /* position: absolute; */
+  /* display: inline-block; */
+  height: 82rpx;
+  width: 50%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+.orders-switch .item .txt{
+    /* position: absolute; */
+  /* display: inline-block; */
+  height: 82rpx;
+  padding: 0;
+  line-height: 82rpx;
+  color: #9a9ba1;
+  font-size: 30rpx;
+  /* width: 230rpx; */
+}
+
+.orders-switch .item.active .txt{
+    /* position: absolute; */
+  color: #e64340;
+  border-bottom: 4rpx solid #e64340;
+}
+
+.dataanalysis_img{
+  margin: 5px;
+  padding: 0 10px;
+  background-color: rgb(253, 253, 253);
+}

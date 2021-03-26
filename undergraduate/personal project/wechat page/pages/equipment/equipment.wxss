@@ -1,0 +1,131 @@
+.container{
+  display: block;
+  padding: 0;
+  height: 200%
+}
+
+.search-header {
+  position: fixed;
+  top: 0;
+  height: 91rpx;
+  width: 93%;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 31.25rpx;
+  font-size: 29rpx;
+  color: #333;
+}
+
+.search-header .input-box {
+  position: relative;
+  margin-top: 16rpx;
+  float: left;
+  /* width: 0; */
+  flex: 1;
+  height: 59rpx;
+  line-height: 59rpx;
+  padding: 0 20rpx;
+  background: #f4f4f4;
+}
+
+.search-header .icon {
+  position: absolute;
+  top: 15rpx;
+  left: 20rpx;
+  width: 31rpx;
+  height: 31rpx;
+}
+
+.search-header .del {
+  position: absolute;
+  top: 15rpx;
+  right: 10rpx;
+  width: 31rpx;
+  height: 31rpx;
+  z-index: 10;
+}
+
+.search-header .keywrod {
+  position: absolute;
+  top: 0;
+  left: 40rpx;
+  width: 506rpx;
+  height: 59rpx;
+  padding-left: 30rpx;
+}
+
+.search-header .right {
+  margin-top: 24rpx;
+  margin-left: 31rpx;
+  margin-right: 6rpx;
+  width: 58rpx;
+  height: 43rpx;
+  line-height: 43rpx;
+  float: right;
+}
+.weui-cells{
+  margin-top: 91rpx;
+  margin-bottom: 98rpx;
+}
+.weui-cell__bd{
+  padding: 13px;
+}
+.pop{
+  position: absolute;
+  margin-top: 30px;
+  width: 225px;
+  /* height: 59rpx; */
+  padding-left: 31.25rpx;
+  background: #ffffff;
+}
+
+.pop-item{
+  border-bottom: 1px solid #f4f4f4
+}
+
+.tianjia_bottom{
+  position: fixed;
+  right:20px;
+  bottom: 100px;
+  width: 30px;
+  height: 30px
+}
+.zan-dialog__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.zan-dialog__container {
+  position: fixed;
+  bottom: 400rpx;
+  width: 650rpx;
+  height: 350rpx;
+  margin-left: 50rpx;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+  box-shadow: 0px 3px 3px 2px gainsboro;
+}
+
+.zan-dialog--show .zan-dialog__container {
+  transform: translateY(0);
+}
+
+.zan-dialog--show .zan-dialog__mask {
+  display: block;
+}
+
+.pop-button{
+  display: flex;
+  margin-top: 10px;
+  height: 35px
+}

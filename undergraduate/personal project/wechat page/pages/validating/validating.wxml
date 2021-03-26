@@ -1,0 +1,64 @@
+<!--pages/equipment/equipment.wxml-->
+<!--pages/dataanalysis/dataanalysis.wxml-->
+<!-- <text>pages/dataanalysis/dataanalysis.wxml</text> -->
+  <view class="orders-switch">
+      <view class="item {{ showType == 0 ? 'active' : ''}}" bindtap="switchTab" data-index='0'>
+        <view class="txt">进行中</view>
+      </view>
+      <view class="item {{ showType == 1 ? 'active' : ''}}" bindtap="switchTab" data-index='1'>
+        <view class="txt">待检验</view>
+      </view>
+        </view>
+      <view class="search-header">
+    <view class="input-box">
+      <image class="icon" src="/images/search.png"></image>
+      <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="confirmSearch" placeholder="{{defaultKeyword.keyword}}" />
+      <view class="pop">
+        <block wx:if="{{helpKeywordStatus}}" wx:for="{{helpKeyword}}" ><view class="pop-item" bindtap="pop" data-keywords ="{{item}}">{{item}}</view></block>
+      </view>
+      <image class="del" style="width:" wx:if="{{keyword}}" bindtap="clearKeyword" src="/images/quxiao.png"></image>
+    </view>
+    <view class="right" bindtap="closeSearch">取消</view>
+  </view>
+
+
+  <!-- <view wx:else wx>{{item}}</view> -->
+
+
+<view class="container">
+  <view class="weui-cells">
+  <view wx:if="{{searchStatus}}">
+    <view  wx:for="{{current_repair}}" wx:key = "id" class="weui-cells_after-title">
+      <navigator url="/pages/equipmentdetail/equipmentdetail?no={{item['equipment']['no']}}" class="weui-cell weui-cell_example " style=" display: flex ; border-bottom: 1px solid #eeeeee">
+        <view class="weui-cell__hd">
+          <image src="{{item['equipment']['image']}}" style="  margin: 5px; vertical-align: middle;width:80px; height: 80px;"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view style="font-size:20px">{{item['equipment']['name']?item['equipment']['name']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">报修人：{{item['repair']['charge']?item['repair']['charge']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">编号：{{item['equipment']['no']?item['equipment']['no']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">报修项目：{{item['repair']['program']?item['repair']['program']:"未知"}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view wx:else>
+  <view wx:for="{{repair}}" wx:key = "id" class="weui-cells_after-title">
+    <navigator url="/pages/equipmentdetail/equipmentdetail?no={{item['equipment']['no']}}" class="weui-cell weui-cell_example " style=" display: flex ; border-bottom: 1px solid #eeeeee">
+      <view class="weui-cell__hd">
+        <image src="{{item['equipment']['image']}}" style="  margin: 5px; vertical-align: middle;width:80px; height: 80px;"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view style="font-size:20px">{{item['equipment']['name']?item['equipment']['name']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">报修人：{{item['repair']['charge']?item['repair']['charge']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">编号：{{item['equipment']['no']?item['equipment']['no']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">报修项目：{{item['repair']['program']?item['repair']['program']:"未知"}}</view>
+        </view>
+    </navigator>
+  </view>
+  </view>
+  </view>
+  <image src="/images/shebeitianjia.png" class="tianjia_bottom" bindtap="goAddrepair"></image>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>
+

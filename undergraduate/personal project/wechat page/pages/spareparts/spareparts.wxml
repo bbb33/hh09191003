@@ -1,0 +1,63 @@
+<!--pages/sparepart/sparepart.wxml-->
+<view class="container">
+  <view class="search-header">
+    <view class="input-box">
+      <image class="icon" src="/images/search.png"></image>
+      <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="confirmSearch" placeholder="{{defaultKeyword.keyword}}" />
+      <view class="pop">
+        <block wx:if="{{helpKeywordStatus}}" wx:for="{{helpKeyword}}" ><view class="pop-item" bindtap="pop" data-keywords ="{{item}}">{{item}}</view></block>
+      </view>
+      <image class="del" style="width:" wx:if="{{keyword}}" bindtap="clearKeyword" src="/images/quxiao.png"></image>
+    </view>
+    <view class="right" bindtap="closeSearch">取消</view>
+  </view>
+  <view class="weui-cells">
+  <view wx:if="{{searchStatus}}">
+    <view  wx:for="{{current_sparepart}}" wx:key = "no" class="weui-cells_after-title">
+    <view bindlongpress="delsparepart" data-no="{{item.no}}">
+      <navigator url="/pages/sparepartdetail/sparepartdetail?no={{item.no}}" class="weui-cell weui-cell_example " style=" display: flex ; border-bottom: 1px solid #eeeeee">
+        <view class="weui-cell__hd">
+          <image src="{{item.img}}" style="  margin: 5px; vertical-align: middle;width:80px; height: 80px;"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view style="font-size:20px">{{item['name']?item['name']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">数量：{{item['number']?item['number']:"未知"}}</view>
+          <view style="font-size:13px;color:#cdf">编号：{{item['no']?item['no']:"未知"}}</view>
+        </view>
+      </navigator>
+    </view>
+    </view>
+  </view>
+  <view wx:else>
+  <view wx:for="{{sparepart}}" wx:key = "id" class="weui-cells_after-title">
+  <view bindlongpress="delsparepart" data-no="{{item.no}}">
+    <navigator url="/pages/sparepartsdetail/sparepartsdetail?no={{item.no}}" class="weui-cell weui-cell_example " style=" display: flex ; border-bottom: 1px solid #eeeeee">
+      <view class="weui-cell__hd">
+        <image src="{{item.img}}" style="  margin: 5px; vertical-align: middle;width:80px; height: 80px;"></image>
+      </view>
+      <view class="weui-cell__bd">
+        <view style="font-size:20px">{{item['name']?item['name']:"未知"}}</view>
+        <view style="font-size:13px;color:#cdf">数量：{{item['number']?item['number']:"未知"}}</view>
+        <view style="font-size:13px;color:#cdf">编号：{{item['no']?item['no']:"未知"}}</view>
+      </view>
+    </navigator>
+  </view>
+  </view>
+  </view>
+  </view>
+  <image src="/images/shebeitianjia.png" class="tianjia_bottom" bindtap="goAddsparepart"></image>
+  <view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+    <view class="zan-dialog__mask"/>
+    <view class="zan-dialog__container">
+      <view style='padding:100rpx;'>
+        <view>请问确定删去此备件吗</view>
+        <view class = "pop-button">
+          <button bindtap="confirmdel">确定</button>
+          <button bindtap="canceldel">取消</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>
+

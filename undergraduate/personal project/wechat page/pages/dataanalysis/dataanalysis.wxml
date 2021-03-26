@@ -1,0 +1,21 @@
+<!--pages/dataanalysis/dataanalysis.wxml-->
+<!-- <text>pages/dataanalysis/dataanalysis.wxml</text> -->
+  <view class="orders-switch">
+      <view class="item {{ showType == 0 ? 'active' : ''}}" bindtap="switchTab" data-index='0'>
+        <view class="txt">数量统计</view>
+      </view>
+      <view class="item {{ showType == 1 ? 'active' : ''}}" bindtap="switchTab" data-index='1'>
+        <view class="txt">故障统计</view>
+      </view>
+      <view class="item {{ showType == 2 ? 'active' : ''}}" bindtap="switchTab" data-index='2'>
+        <view class="txt">计划项目统计</view>
+      </view>
+  </view>
+
+<view class="dataanalysis_img">
+  <view class="qiun-charts">
+  <canvas canvas-id="canvasLineA" id="canvasLineA" class="charts" bindtouchstart="touchLineA" bindtouchmove="moveLineA" bindtouchend="touchEndLineA"></canvas>
+  </view>
+</view>
+  <!-- <view wx:else wx>{{item}}</view> -->
+

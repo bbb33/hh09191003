@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view >
+    <view class="weui-cells ">
+      <view class="weui-cell__hd">
+        <image src="{{userInfo.avatarUrl}}" style="margin: 16px;vertical-align: middle;width:80px; height: 80px; border-radius: 50%"></image>
+      </view>
+      <view class="weui-cell-bd">
+      <view class="weui-cell-img">
+        <view style="font-size:20px">{{userInfo.nickname}}</view>
+      </view>
+        <view style="font-size:12px;color:#aaa">总设备数：{{userInfo.equipmentnum}}</view>
+        <view style="font-size:10px;color:#aaa">报修审核中：{{userInfo.repair_validating}}</view>
+        <view style="font-size:10px;color:#aaa">报修进行中：{{userInfo.repair_repairing}}</view>
+        <view style="font-size:10px;color:#aaa">保养审核中：{{userInfo.maintainance_validating}}</view>
+        <view style="font-size:10px;color:#aaa">保养进行中：{{userInfo.maintainance_ing}}</view>
+      </view>
+
+    </view>
+  <view class="tianjialan">
+    <view class="tianjialan__item">
+      <view class="tianjialaninner" >
+        <view class='tianjialaninner_item' bindtap='goAddequipment'>
+          <image class='tianjialaninner_item_image' src='/images/tianjia.png'></image>
+          <view class='tianjialaninner_item_text'>添加设备</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap='goInformation'>
+          <image class='tianjialaninner_item_image' src='/images/xiaoxi.png'></image>
+          <view class='tianjialaninner_item_text'>添加备件</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap='goAddrepair'>
+          <image class='tianjialaninner_item_image' src='/images/baoxiu.png'></image>
+          <view class='tianjialaninner_item_text'>报修</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap='goAddmaintainance'>
+          <image class='tianjialaninner_item_image' src='/images/baoyang.png'></image>
+          <view class='tianjialaninner_item_text'>保养</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="baoxiuchuli">
+    <view class="baoxiuchuli__item"><view class="baoxiuchuliinner">报修处理</view></view>
+    <view class="baoxiuchuli__item"><view class="baoxiuchuliinner">巡检任务</view></view>
+  </view>
+  <view class="xunjianrenwu">
+    <view class="xunjianrenwu__item">
+      <view class="xunjianrenwuinner">
+        <navigator class='xunjianrenwuinner_item' url="/pages/validating/validating?id=0" >
+          <image class='xunjianrenwuinner_item_image' src='/images/shouye-middle/jinxingzhong.png'></image>
+          <view class='xunjianrenwuinner_item_text'>进行中</view>
+        </navigator>
+        <navigator class='xunjianrenwuinner_item' url="/pages/validating/validating?id=1">
+          <image class='xunjianrenwuinner_item_image' src='/images/shouye-middle/yanzhengzhong.png'></image>
+          <view class='xunjianrenwuinner_item_text'>待验证</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="xunjianrenwu__item">
+      <view class="xunjianrenwuinner">
+       <view class='xunjianrenwuinner_item' >
+          <view class='xunjianrenwuinner_item_text_up'>{{todaynumber?todaynumber:"0"}}/{{sum?sum:"0"}}</view>
+          <view class='xunjianrenwuinner_item_text'>今日</view>
+        </view>
+        <view class='xunjianrenwuinner_item'>
+          <view class='xunjianrenwuinner_item_text_up'>{{monthnumber?monthnumber:"0"}}/{{sum?sum:"0"}}</view>
+          <view class='xunjianrenwuinner_item_text'>本月</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tongjifenxi">统计分析</view>
+      <block wx:for="{{list1}}" wx:key = "id">
+        <navigator url="/pages/dataanalysis/dataanalysis?id={{item.id}}" class="tongjifenxiinner">
+          <view class="tongjifenxiinner_up">
+            <image class='tongjifenxiinner_image' src='/images/goright.png'></image>
+            <view class="tongjifenxiinner_name">{{item.name}}</view>
+          </view>
+          <view class="tongjifenxiinner_annotation">{{item.annotation}}</view>
+        </navigator>
+      </block>
+<!-- <button class="weui-btn" type="primary" bindtap="bindtest">测试</button> -->
+
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+  
+</view>

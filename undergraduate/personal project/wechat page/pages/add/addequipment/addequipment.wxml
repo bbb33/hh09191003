@@ -1,0 +1,47 @@
+<!--pages/add/addequipment/addequipment.wxml-->
+<!-- <text>pages/add/addequipment/addequipment.wxml</text> -->
+
+<view>
+  <view class="equipmentImg" catchtap="chooseImageTap">
+  <view>点击选择图片</view>
+  <image class="equipmentimg"  src="{{equipmentImg}}"></image>
+  </view>
+  <block wx:for = "{{list}}" wx:key = "id">
+    <view wx:if="{{item.pop == true}}" class="show-btn" bindtap="showDialogBtn" id="{{item.id}}">
+      <view class="show-btn-text">{{item.name}}</view>
+      <view class="show-btn-text">{{item.selected}}</view>
+      <view wx:if="{{item.showimg}}">
+      <image  src="/images/goright.png" class="show-btn-img"></image>
+      </view>
+    </view >
+    <view wx:else class="show-input" >
+      <view class="show-input-text">{{item.name}}</view>
+      <input data-id="{{item.id}}" type="text" bindconfirm="change" class="show-input-input" placeholder="{{item.placeholder}}"></input> 
+    </view>
+  </block>
+  <view wx:if="{{!isModify}}">
+  <button class="weui-btn" type="primary" bindtap="addequipment">提交</button>
+  </view>
+  <view wx:else>
+  <button class="weui-btn" type="primary" bindtap="modified">修改</button>
+  </view>
+</view>
+
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}"> 
+  <view class="modal-content"> 
+    <view class="modal-input"> 
+      <block wx:for="{{list}}" wx:key= "id">
+        <view wx:if="{{item.id == currentid}}">
+           <view data-text="{{item.name}}" bindtap="selectOptions" wx:for="{{item.options}}" class="{{item.changeColor?'selected':'normal'}}">{{item.name}}</view>
+        </view>
+      </block>
+    </view> 
+  </view> 
+  <view class="modal-footer"> 
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view> 
+    <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view> 
+  </view> 
+</view>
+
+

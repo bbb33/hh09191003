@@ -1,0 +1,44 @@
+<!--pages/equipmentdetail/equipmentdetail.wxml-->
+<!-- <text>pages/equipmentdetail/equipmentdetail.wxml</text> -->
+<view class="container">
+      <view class="weui-cell__hd">
+        <image src="{{equipmentdetail.image}}" style="margin: 16px;vertical-align: middle;width:80px; height: 80px"></image>
+        <view style="font-size:20px">{{equipmentdetail.name}}</view>
+      </view>
+      <view class="detail">
+        <view style="font-size:15px;color:#cdf">设备编号：  {{equipmentdetail.no}}</view>
+        <view style="font-size:15px;color:#cdf">规格型号：  {{equipmentdetail.model}}</view>
+        <view style="font-size:15px;color:#cdf">操作人员：  {{equipmentdetail.worker}}</view>
+        <view style="font-size:15px;color:#cdf">生产厂商：  {{equipmentdetail.manufacturer}}</view>
+        <view style="font-size:15px;color:#cdf">所在部门：  {{equipmentdetail.department}}</view>
+        <view style="font-size:15px;color:#cdf">设备状态：  {{equipmentdetail.conditions}}</view>
+        <view style="font-size:15px;color:#cdf">安放位置：  {{equipmentdetail.place}}</view>
+        <view style="font-size:15px;color:#cdf">设备类型：  {{equipmentdetail.category}}</view>
+        <view style="font-size:15px;color:#cdf">供应商：  {{equipmentdetail.vendor}}</view>
+        <view style="font-size:15px;color:#cdf">始用时间：  {{equipmentdetail.usage_date}}</view>
+        <view style="font-size:15px;color:#cdf">备件编号：  {{equipmentdetail.sparepart_no}}</view>
+        <view style="font-size:15px;color:#cdf">备注：  {{equipmentdetail.eg}}</view>
+        <image class="detail_img" src="/images/xiugai.png"  bindtap="modify"></image>
+      </view>
+
+  <view class="daily">
+    <view class="daily-text">日常工具</view>
+    <view class="tianjialaninner" >
+        <view class='tianjialaninner_item' bindtap="goAddrepair">
+          <image class='tianjialaninner_item_image' src='/images/guzhangxiuli.png'></image>
+          <view class='tianjialaninner_item_text'>故障登记</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap="goAddmaintainance">
+          <image class='tianjialaninner_item_image' src='/images/baoxiu.png'></image>
+          <view class='tianjialaninner_item_text'>保养计划</view>
+        </view>
+        <view class='tianjialaninner_item' bindtap="goChangeSparepart" >
+          <image class='tianjialaninner_item_image' src='/images/baoyang.png'></image>
+          <view class='tianjialaninner_item_text'>备件更换</view>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+

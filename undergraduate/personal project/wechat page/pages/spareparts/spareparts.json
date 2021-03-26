@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "备件列表",
+  "usingComponents": {
+    "tabbar": "../../tabbarComponent/tabbar"
+  }
+}
