@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/middle/middle",
+    "pages/mine/mine",
+    "pages/equipment/equipment",
+    "pages/spareparts/spareparts",
+    "pages/add/addequipment/addequipment",
+    "pages/add/addmaintainance/addmaintainance",
+    "pages/add/addrepair/addrepair",
+    "pages/validating/validating",
+    "pages/information/information",
+    "pages/dataanalysis/dataanalysis",
+    "pages/equipmentdetail/equipmentdetail",
+    "pages/sparepartsdetail/sparepartsdetail",
+    "pages/auth/login/login",
+    "pages/auth/register/register"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#e8915b",
+    "navigationBarTitleText": "tabBar",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#979795",
+    "selectedColor": "#1c1c1b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/tabbarComponent/icon/shouye2.png",
+        "selectedIconPath": "/tabbarComponent/icon/shouye1.png"
+      },
+      {
+        "pagePath": "pages/equipment/equipment",
+        "text": "设备",
+        "iconPath": "tabbarComponent/icon/shebeiguanli2.png",
+        "selectedIconPath": "tabbarComponent/icon/shebeiguanli2.png"
+      },
+      {
+        "pagePath": "pages/spareparts/spareparts",
+        "text": "备件",
+        "iconPath": "tabbarComponent/icon/beijianguanli1.png",
+        "selectedIconPath": "tabbarComponent/icon/beijianguanli2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "tabbarComponent/icon/wode2.png",
+        "selectedIconPath": "tabbarComponent/icon/wode1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
